@@ -1,0 +1,66 @@
+.timewheel {
+  position: relative;
+  height: 230px;
+  width: 150px;
+  margin: 0 auto;
+}
+
+.timewheel-compact {
+  height: 138px;
+  width: 118px;
+}
+
+.timewheel-scroll {
+  height: 100%;
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+  scrollbar-width: none;
+  -webkit-mask-image: linear-gradient(180deg, transparent, #000 30%, #000 70%, transparent);
+  mask-image: linear-gradient(180deg, transparent, #000 30%, #000 70%, transparent);
+}
+
+.timewheel-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.timewheel-pad {
+  height: calc(50% - 23px);
+}
+
+.timewheel-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 46px;
+  width: 100%;
+  scroll-snap-align: center;
+  font-size: 24px;
+  letter-spacing: 1px;
+  opacity: 0.4;
+  color: inherit;
+  font-variant-numeric: tabular-nums;
+  transition: opacity 0.15s ease, transform 0.15s ease;
+}
+
+.timewheel-compact .timewheel-item {
+  font-size: 20px;
+}
+
+.timewheel-current {
+  opacity: 1;
+  font-weight: 600;
+  transform: scale(1.12);
+}
+
+.timewheel-highlight {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 46px;
+  transform: translateY(-50%);
+  border-radius: 14px;
+  background: rgba(91, 194, 214, 0.12);
+  border: 1.5px solid rgba(91, 194, 214, 0.35);
+  pointer-events: none;
+}

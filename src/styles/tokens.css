@@ -1,0 +1,31 @@
+/* Pace 色彩與造型 token — 全部由 Doog 四色延伸 */
+:root {
+  --doog-blue: #214C9F;
+  --lake: #5BC2D6;
+  --lavender: #BFA6D4;
+  --cream: #F7F9F9;
+
+  /* 情境背景 */
+  --night-top: #131A38;
+  --night-bottom: #1C2650;
+  --morning-top: #E2F3F5;
+  --morning-bottom: #F7EDDE;
+  --midnight: #0D1226;
+
+  /* 衍生色 */
+  --ink: #131A38;              /* 晨間文字 */
+  --night-card: rgba(247, 249, 249, 0.08);
+  --morning-card: rgba(255, 255, 255, 0.72);
+  --lake-dim: rgba(91, 194, 214, 0.35);
+  --lavender-dim: rgba(191, 166, 212, 0.3);
+
+  --radius-card: 24px;
+  --font-round: 'jf-openhuninn', 'PingFang TC', 'Heiti TC', sans-serif;
+}
+
+@font-face {
+  font-family: 'jf-openhuninn';
+  src: url('../assets/fonts/jf-openhuninn-2.1.ttf') format('truetype');
+  font-weight: normal;
+  font-display: swap;
+}

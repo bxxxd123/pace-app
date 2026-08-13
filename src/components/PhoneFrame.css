@@ -1,0 +1,75 @@
+.frame-outer {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at 50% 20%, #2c2f38, #191b20 70%);
+}
+
+.frame-phone {
+  width: 406px;
+  height: 860px;
+  border-radius: 56px;
+  background: #0b0c10;
+  padding: 8px;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.55), inset 0 0 0 2px #33363e;
+  flex-shrink: 0;
+}
+
+.frame-phone {
+  transform: scale(var(--frame-scale, 1));
+}
+
+.frame-screen {
+  position: relative;
+  width: 390px;
+  height: 844px;
+  border-radius: 48px;
+  overflow: hidden;
+  background: var(--night-top);
+  display: flex;
+  flex-direction: column;
+}
+
+.frame-statusbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 52px;
+  z-index: 60;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 28px 0;
+  color: currentColor;
+  pointer-events: none;
+}
+
+.frame-statusbar > * {
+  pointer-events: auto;
+}
+
+#status-clock {
+  font-size: 15px;
+  font-weight: 600;
+  color: inherit;
+  letter-spacing: 0.3px;
+}
+
+.frame-notch {
+  position: absolute;
+  left: 50%;
+  top: 12px;
+  transform: translateX(-50%);
+  width: 118px;
+  height: 30px;
+  border-radius: 20px;
+  background: #0b0c10;
+}
+
+.frame-status-icons {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}

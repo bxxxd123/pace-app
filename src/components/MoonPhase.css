@@ -1,0 +1,21 @@
+.moonphase {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.moonphase-text {
+  flex: 1;
+}
+
+.moonphase-range {
+  display: block;
+  font-size: 12px;
+  opacity: 0.55;
+  margin-bottom: 4px;
+}
+
+.moonphase p {
+  font-size: 16px;
+  line-height: 1.6;
+}

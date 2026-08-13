@@ -1,0 +1,43 @@
+.overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 30;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  animation: overlay-in 0.28s ease-out;
+  color: var(--cream);
+}
+
+@keyframes overlay-in {
+  from { transform: translateY(6%); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.overlay-night {
+  background: linear-gradient(180deg, var(--night-top) 0%, var(--night-bottom) 100%);
+}
+
+.overlay-morning {
+  background: linear-gradient(180deg, var(--morning-top) 0%, var(--morning-bottom) 100%);
+  color: var(--ink);
+}
+
+.overlay-midnight {
+  background: var(--midnight);
+}
+
+.overlay-close {
+  position: absolute;
+  top: 58px;
+  right: 22px;
+  z-index: 40;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(128, 128, 160, 0.18);
+  color: inherit;
+}

@@ -1,0 +1,61 @@
+.records-detail {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 92px 24px 0;
+  position: relative;
+  z-index: 1;
+}
+
+.records-detail-title {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.records-detail-scroll {
+  flex: 1;
+  overflow-y: auto;
+  scrollbar-width: none;
+  padding-bottom: 110px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  -webkit-mask-image: linear-gradient(180deg, #000 90%, transparent 98%);
+  mask-image: linear-gradient(180deg, #000 90%, transparent 98%);
+}
+
+.records-detail-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.records-detail-row {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  padding: 14px 4px;
+  border-bottom: 1px solid rgba(247, 249, 249, 0.08);
+  font-size: 14px;
+}
+
+.records-detail-date {
+  width: 78px;
+  flex-shrink: 0;
+  opacity: 0.7;
+}
+
+.records-detail-range {
+  flex: 1;
+  font-variant-numeric: tabular-nums;
+}
+
+.records-detail-hours {
+  color: var(--lake);
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.records-detail-empty {
+  flex: 1;
+  opacity: 0.4;
+}

@@ -1,0 +1,217 @@
+.flow {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 104px 28px 36px;
+  position: relative;
+  z-index: 1;
+}
+
+.flow-center {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 4px;
+}
+
+/* 修改睡覺時間完成畫面：咘咘＋文字往下方置中，按鈕留在最下面 */
+.flow-bedtime-done {
+  align-items: center;
+  text-align: center;
+}
+
+.flow-bedtime-block {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.flow-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+.flow-header-tight {
+  margin-bottom: 26px;
+}
+
+.flow-title {
+  font-size: 23px;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.flow-title-accent {
+  color: var(--doog-blue);
+  font-size: 20px;
+  margin-top: 0;
+}
+
+.flow-sub {
+  margin-top: 8px;
+  font-size: 14.5px;
+  opacity: 0.7;
+}
+
+.flow-feeling {
+  font-size: 18px;
+  color: var(--lake);
+  opacity: 1;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.theme-morning .flow-feeling {
+  color: var(--doog-blue);
+}
+
+.flow-suggest {
+  display: flex;
+  justify-content: center;
+  margin-top: 18px;
+}
+
+.flow-actions {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  padding-top: 22px;
+}
+
+/* F2 表情評分 */
+.flow-faces {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.flow-face {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 6px;
+  border-radius: 18px;
+  transition: transform 0.18s ease, background 0.18s ease;
+  color: inherit;
+  width: 62px;
+}
+
+.flow-face-icon {
+  font-size: 30px;
+  filter: grayscale(0.4);
+  transition: transform 0.18s ease, filter 0.18s ease;
+}
+
+.flow-face-label {
+  font-size: 12px;
+  opacity: 0.6;
+}
+
+.flow-face-active {
+  background: rgba(91, 194, 214, 0.14);
+}
+
+.flow-face-active .flow-face-icon {
+  transform: scale(1.3);
+  filter: none;
+}
+
+.flow-face-active .flow-face-label {
+  opacity: 1;
+  font-weight: 600;
+}
+
+/* F2 起訖時間 */
+.flow-times {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+.flow-time-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.flow-time-label {
+  font-size: 13px;
+  opacity: 0.65;
+}
+
+.flow-pet-gap {
+  margin-top: 16px;
+}
+
+/* 夢境提示：無色塊，一條分隔線 + 純文字 */
+.flow-divider {
+  margin-top: 26px;
+  width: 100%;
+  max-width: 283px;
+  height: 1px;
+  background: rgba(19, 26, 56, 0.15);
+}
+
+.theme-morning .flow-divider {
+  background: rgba(19, 26, 56, 0.2)
+}
+
+.flow-dreamcard {
+  margin-top: 26px;
+  text-align: center;
+}
+
+.flow-dreamcard-title {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.flow-dreamcard-sub {
+  margin-top: 7px;
+  font-size: 14px;
+  opacity: 0.65;
+}
+
+/* 睡眠摘要：白底卡片 */
+.flow-summary {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  width: 100%;
+  padding: 16px 24px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.flow-summary-label {
+  font-size: 16px;
+  color: #505050;
+}
+
+.flow-summary-hours {
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 1;
+  color: var(--doog-blue);
+}
+
+.flow-summary-hours span {
+  font-size: 16px;
+  font-weight: 400;
+  margin-left: 2px;
+}
+
+.flow-summary-range {
+  font-size: 16px;
+  opacity: 0.65;
+}

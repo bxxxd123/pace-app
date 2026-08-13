@@ -1,0 +1,136 @@
+.records {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  color: var(--cream);
+  background: linear-gradient(180deg, var(--night-top) 0%, var(--night-bottom) 100%);
+  display: flex;
+  flex-direction: column;
+}
+
+.records-empty {
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.records-empty p {
+  font-size: 15px;
+  opacity: 0.7;
+}
+
+.records-scroll {
+  flex: 1;
+  overflow-y: auto;
+  scrollbar-width: none;
+  padding: 84px 24px 110px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  -webkit-mask-image: linear-gradient(180deg, #000 86%, transparent 97%);
+  mask-image: linear-gradient(180deg, #000 86%, transparent 97%);
+}
+
+.records-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.records-title {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.records-card-label {
+  display: block;
+  font-size: 13px;
+  opacity: 0.6;
+  margin-bottom: 12px;
+}
+
+.records-card-wave-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.records-card-arrow {
+  font-size: 20px;
+  opacity: 0.5;
+  margin-bottom: 12px;
+}
+
+.records-divider {
+  height: 1px;
+  background: rgba(247, 249, 249, 0.12);
+  margin: 4px 0;
+}
+
+.records-insights-head {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.records-insights-title {
+  flex: 1;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.records-insight {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.records-insight p {
+  font-size: 14.5px;
+  line-height: 1.6;
+  flex: 1;
+}
+
+.records-insight-icon {
+  font-size: 20px;
+}
+
+.records-insight-pattern {
+  border-left: 3px solid var(--lake);
+}
+
+.records-insight-trend {
+  border-left: 3px solid var(--lavender);
+}
+
+.records-insight-dream {
+  border-left: 3px solid rgba(247, 249, 249, 0.4);
+}
+
+.records-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+.records-tag {
+  padding: 7px 16px;
+  border-radius: 999px;
+  font-size: 13.5px;
+}
+
+.records-tag-emotion {
+  background: var(--lavender-dim);
+  color: var(--lavender);
+}
+
+.records-tag-theme {
+  background: var(--lake-dim);
+  color: var(--lake);
+}
+
+.records-tag-big {
+  font-size: 16.5px;
+  padding: 10px 22px;
+  font-weight: 600;
+}

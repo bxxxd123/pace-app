@@ -1,0 +1,83 @@
+.ui-card {
+  display: block;
+  width: 100%;
+  border-radius: var(--radius-card);
+  padding: 20px;
+  background: var(--night-card);
+  color: inherit;
+  text-align: left;
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(247, 249, 249, 0.06);
+}
+
+/* 晨間主題下的卡片（由父層 .theme-morning 切換） */
+.theme-morning .ui-card {
+  background: var(--morning-card);
+  border-color: rgba(19, 26, 56, 0.06);
+  box-shadow: 0 6px 24px rgba(19, 26, 56, 0.06);
+}
+
+.ui-btn-primary {
+  display: block;
+  width: 100%;
+  padding: 17px 24px;
+  border-radius: 999px;
+  background: var(--doog-blue);
+  color: var(--cream);
+  font-size: 17px;
+  font-weight: 600;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+.ui-btn-primary:active {
+  transform: scale(0.97);
+  opacity: 0.9;
+}
+
+.ui-btn-primary:disabled {
+  opacity: 0.35;
+}
+
+.ui-btn-ghost {
+  display: block;
+  width: 100%;
+  padding: 17px 24px;
+  border-radius: 999px;
+  border: 1px solid var(--lake);
+  color: var(--lake);
+  font-size: 17px;
+  font-weight: 600;
+  transition: transform 0.15s ease;
+}
+
+.ui-btn-ghost:active {
+  transform: scale(0.97);
+}
+
+.theme-morning .ui-btn-ghost {
+  color: var(--doog-blue);
+  border-color: rgba(33, 76, 159, 0.3);
+}
+
+.ui-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 9px 18px;
+  border-radius: 999px;
+  border: 1.5px solid rgba(247, 249, 249, 0.18);
+  color: inherit;
+  font-size: 14.5px;
+  transition: all 0.15s ease;
+}
+
+.theme-morning .ui-chip {
+  border-color: rgba(19, 26, 56, 0.18);
+}
+
+.ui-chip-selected {
+  background: var(--lake);
+  border-color: var(--lake);
+  color: var(--night-top);
+  font-weight: 600;
+}

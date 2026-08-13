@@ -1,0 +1,162 @@
+.dreammonth {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+}
+
+.dreammonth-scroll {
+  flex: 1;
+  overflow-y: auto;
+  scrollbar-width: none;
+  padding: 92px 24px 110px;
+  -webkit-mask-image: linear-gradient(180deg, #000 92%, transparent 99%);
+  mask-image: linear-gradient(180deg, #000 92%, transparent 99%);
+}
+
+.dreammonth-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.dreammonth-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+  margin-bottom: 18px;
+}
+
+.dreammonth-title {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.dreammonth-nav {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  font-size: 17px;
+  opacity: 0.7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dreammonth-weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  font-size: 12px;
+  opacity: 0.5;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.dreammonth-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  row-gap: 8px;
+}
+
+.dreammonth-cell {
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  width: 34px;
+  border-radius: 50%;
+  font-size: 13.5px;
+  color: inherit;
+  background: none;
+  border: none;
+  font-family: inherit;
+}
+
+button.dreammonth-cell:not(:disabled) {
+  cursor: pointer;
+}
+
+button.dreammonth-cell:disabled {
+  opacity: 0.35;
+}
+
+.dreammonth-cell-lit {
+  background: var(--lake);
+  color: var(--night-top);
+  font-weight: 600;
+}
+
+.dreammonth-cell-today:not(.dreammonth-cell-lit) {
+  border: 1.5px solid rgba(247, 249, 249, 0.5);
+}
+
+.dreammonth-list-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 26px 0 14px;
+}
+
+.dreammonth-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  padding: 24px 0 8px;
+  text-align: center;
+  opacity: 0.75;
+}
+
+.dreammonth-empty p {
+  font-size: 14px;
+}
+
+.dreammonth-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.dreammonth-card {
+  padding: 18px 20px;
+  border-radius: var(--radius-card);
+  background: var(--night-card);
+  border: 1px solid rgba(247, 249, 249, 0.06);
+  scroll-margin-top: 90px;
+}
+
+.dreammonth-card-date {
+  display: block;
+  font-size: 12px;
+  opacity: 0.55;
+  margin-bottom: 8px;
+}
+
+.dreammonth-card-text {
+  font-size: 14.5px;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+.dreammonth-card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.dreammonth-tag {
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 12.5px;
+}
+
+.dreammonth-tag-emotion {
+  background: var(--lavender-dim);
+  color: var(--lavender);
+}
+
+.dreammonth-tag-theme {
+  background: var(--lake-dim);
+  color: var(--lake);
+}

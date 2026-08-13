@@ -1,0 +1,35 @@
+.scenery {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.scenery svg {
+  width: 100%;
+  height: 100%;
+}
+
+.scenery-night {
+  background: linear-gradient(180deg, var(--night-top) 0%, var(--night-bottom) 100%);
+}
+
+.scenery-morning {
+  background: linear-gradient(180deg, var(--morning-top) 0%, var(--morning-bottom) 100%);
+}
+
+.scenery-midnight {
+  background: var(--midnight);
+}
+
+.scenery-star {
+  animation: star-twinkle 4s ease-in-out infinite;
+}
+
+.scenery-star:nth-of-type(2) { animation-delay: 1.3s; }
+.scenery-star:nth-of-type(3) { animation-delay: 2.6s; }
+
+@keyframes star-twinkle {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.35; }
+}

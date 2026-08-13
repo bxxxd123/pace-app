@@ -1,0 +1,227 @@
+.dream {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 104px 28px 36px;
+  position: relative;
+  z-index: 1;
+}
+
+.dream-center {
+  justify-content: center;
+  text-align: center;
+}
+
+.dream-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.dream-title {
+  font-size: 22px;
+  font-weight: 600;
+  margin-top: 12px;
+}
+
+.dream-sub {
+  margin-top: 8px;
+  font-size: 14px;
+  opacity: 0.65;
+}
+
+.dream-mic {
+  position: relative;
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  background: var(--lake);
+  color: var(--night-top);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+}
+
+.dream-mic:active {
+  transform: scale(0.95);
+}
+
+.dream-mic-recording {
+  background: var(--doog-blue);
+  color: var(--cream);
+}
+
+.dream-ripple {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 2px solid var(--lake);
+  animation: dream-ripple 1.4s ease-out infinite;
+}
+
+.dream-ripple-2 {
+  animation-delay: 0.7s;
+}
+
+@keyframes dream-ripple {
+  from { transform: scale(1); opacity: 0.7; }
+  to { transform: scale(1.9); opacity: 0; }
+}
+
+.dream-mic-hint {
+  margin-top: 14px;
+  font-size: 13px;
+  opacity: 0.65;
+}
+
+.dream-text {
+  margin-top: 26px;
+  width: 100%;
+  border-radius: 20px;
+  border: 1.5px solid rgba(191, 166, 212, 0.35);
+  background: rgba(191, 166, 212, 0.1);
+  color: inherit;
+  padding: 16px 18px;
+  font-size: 15px;
+  line-height: 1.6;
+  resize: none;
+  outline: none;
+}
+
+.dream-text:focus {
+  border-color: var(--lavender);
+}
+
+.dream-text::placeholder {
+  color: currentColor;
+  opacity: 0.4;
+}
+
+.dream-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 26px;
+}
+
+.dream-picker {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  margin-top: 14px;
+  padding: 14px;
+  border-radius: 18px;
+  background: rgba(128, 140, 170, 0.12);
+}
+
+.dream-tag {
+  padding: 9px 18px;
+  border-radius: 999px;
+  font-size: 14.5px;
+  color: inherit;
+  transition: transform 0.15s ease;
+}
+
+.dream-tag:active {
+  transform: scale(0.94);
+}
+
+.dream-tag-emotion {
+  background: var(--lavender-dim);
+  color: var(--lavender);
+}
+
+.overlay-morning .dream-tag-emotion {
+  color: #7c5f96;
+}
+
+.dream-tag-theme {
+  background: var(--lake-dim);
+  color: var(--lake);
+}
+
+.overlay-morning .dream-tag-theme {
+  color: #2b7f92;
+}
+
+.dream-tag-add {
+  border: 1.5px dashed rgba(128, 140, 170, 0.5);
+  background: none;
+}
+
+.dream-actions {
+  margin-top: auto;
+  padding-top: 24px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.dream-center .dream-actions {
+  margin-top: 30px;
+}
+
+.dream-text-readonly {
+  margin-top: 20px;
+  width: 100%;
+  border-radius: 20px;
+  background: rgba(191, 166, 212, 0.1);
+  padding: 16px 18px;
+  font-size: 14px;
+  line-height: 1.6;
+  text-align: left;
+  opacity: 0.85;
+}
+
+/* 完成夢境紀錄通知：無色塊，霧面模糊遮罩上只有圖片與文字，顯示幾秒後自動消失 */
+.dream-notice-backdrop {
+  position: absolute;
+  inset: 0;
+  z-index: 90;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: dream-notice-fade 0.2s ease-out;
+}
+
+@keyframes dream-notice-fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.dream-notice-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 4px;
+  width: 260px;
+  color: var(--cream);
+}
+
+.dream-notice-title {
+  color: var(--cream);
+}
+
+.theme-morning .dream-notice-title {
+  color: var(--doog-blue);
+}
+
+.dream-notice-sub {
+  color: rgba(247, 249, 249, 0.7);
+}
+
+.dream-notice-pet {
+  margin-top: 16px;
+}
+
+.theme-morning .dream-notice-sub {
+  color: rgba(19, 26, 56, 0.7);
+}

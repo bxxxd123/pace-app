@@ -1,0 +1,62 @@
+.rename-backdrop {
+  position: absolute;
+  inset: 0;
+  z-index: 90;
+  background: rgba(13, 18, 38, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: rename-fade-in 0.18s ease-out;
+}
+
+@keyframes rename-fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.rename-card {
+  width: 300px;
+  padding: 26px 22px;
+  border-radius: var(--radius-card);
+  background: var(--night-bottom);
+  color: var(--cream);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+
+.rename-card h3 {
+  font-size: 17px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.rename-input {
+  margin-top: 18px;
+  width: 100%;
+  padding: 14px 18px;
+  border-radius: 16px;
+  background: rgba(247, 249, 249, 0.1);
+  border: 1.5px solid rgba(247, 249, 249, 0.18);
+  color: inherit;
+  font-size: 16px;
+  text-align: center;
+  outline: none;
+}
+
+.rename-input:focus {
+  border-color: var(--lake);
+}
+
+.rename-input::placeholder {
+  color: currentColor;
+  opacity: 0.4;
+}
+
+.rename-actions {
+  margin-top: 18px;
+  display: flex;
+  gap: 10px;
+}
+
+.rename-actions > * {
+  flex: 1;
+}
